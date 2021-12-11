@@ -15,8 +15,8 @@ let
     (* fun loop (acc,) *)
     val i = 4
   in
-    i
+    [empty] 
   end;
 in
-  []
+  postOrderFold(fn(acc,node)=>acc @ node,[],tree)
 end;
