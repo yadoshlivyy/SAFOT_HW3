@@ -44,3 +44,12 @@ p = Point(x=1, y=2)
 ### Part 4
 
 - top is Any in given documentation
+
+## Question 3
+
+- Strongly typed
+- Dynamically typed
+- Gradually typed
+- Non Discriminal constructors
+- Have Highly advanced type constructors
+- inferred typing
