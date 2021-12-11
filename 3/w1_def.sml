@@ -5,3 +5,18 @@ signature S1 = sig
   val flatten : 'a btree -> 'a list
   val unfold : ('b -> ('a * 'b * 'b) option) -> 'b -> 'a btree
 end;
+
+fun
+flatten empty = [] |
+flatten (tree : 'a btree)= 
+let
+  fun postOrderFold (f,acc,node)=
+  let
+    (* fun loop (acc,) *)
+    val i = 4
+  in
+    i
+  end;
+in
+  []
+end;
