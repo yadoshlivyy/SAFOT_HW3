@@ -1,7 +1,7 @@
 use "w1.sml";
 use "utils.sml";
 
-open W1;
+(* open W1; *)
 
 fun parse_btree s =
     let
@@ -17,11 +17,14 @@ fun parse_btree s =
     in
         tr
     end;
-
+val t = parse_btree "a-_-_"
+val t = parse_btree "a-b-_-_-_"
+val t = parse_btree "a-b-_-_-c-_-_"
 val t = parse_btree "a-b-_-_-c-d-_-_-e-_-_";
 
 val t' = parse_btree "aa-bb-_-_-cc-dd-_-_-ee-_-_";
 
-assert (map (fn x => x ^ x) t = t');
+(* assert (map (fn x => x ^ x) t = t'); *)
 
-assert (flatten t = ["a", "b", "c", "d", "e"]);
+(* assert (flatten t = ["a", "b", "c", "d", "e"]); *)
+flatten t
