@@ -54,6 +54,29 @@ p = Point(x=1, y=2)
 - Have Highly advanced type constructors
 - inferred typing
 
+## Question 4
+
+### Part 1
+
+This language need to prove to properties :
+
+**Progress** - if term passed type-checker , then it will be able to evaluate this term during runtime
+
+**Preservation** - the result of valuation of term will be the same as predicted by type-checker
+
+### Part 2
+
+```typescript
+const userAge = "23" as any as number;
+```
+
+we have a conflict with preservation , because type-checker predict number but during evaluation we will recieve string
+
+### Part 3
+
+We already meeted term **type safety** , and it
+intersect with current term because we call language type safe if its static typed and strong typed , and in most contexts this term is used as synonym of type safety , but while type safety is only binary property of language , type soundness is more strict term.
+
 ## Question 5
 
 ## Q5.2
