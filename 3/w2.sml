@@ -4,6 +4,9 @@ structure W2 :> S2 =
 struct
   exception SeqErr
 
+  fun get_seq_val Nil = raise SeqErr
+    | get_seq_val (Cons (x, xs)) = x
+
   type 'a memory = (int * 'a) list ref
 
   fun memory_put memory (i, x) = 
@@ -16,7 +19,7 @@ struct
 
   type 'a biseq = ('a seq) * int * (('a seq) memory)
   fun new Nil = (Nil, 0, ref [])
-    | new s = (s, 0, ref [])
+    | new s = (s, 0, ref [(0, s)])
   fun empty (Nil, _, _) = true
     | empty _ = false
   fun curr (Nil, _, _) = raise SeqErr
